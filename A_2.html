@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-1</title>
-    <link rel="stylesheet" href="/css/A_1.css">
+    <title>A-2</title>
+    <link rel="stylesheet" href="/css/A_2.css">
     <script src="./script/jquery-1.12.4.js"></script>
     <script src="./script/A_1.js"></script>
 </head>
@@ -60,28 +60,26 @@
         // 메뉴
         $('.gnb').hover(
             function(){
-                $('.gnb ul').stop().fadeIn()
+                $('.gnb ul').stop().slideDown()
+                $('.gnb').addClass('active')
             },
             function(){
-                $('.gnb ul').stop().fadeOut()
+                $('.gnb ul').stop().slideUp()
+                $('.gnb').removeClass('active')
             }
         )
 
+
+
         // 슬라이드
-        // setInterval(function(){
-        //     $('.slide').animate({top:-300},function(){
-        //         $('.slide div:first').appendTo($('.slide'))
-        //         $('.sldie').css('top', 0)
-        //     })
-        // },3000)
 
         // 왼쪽으로 이동하는 슬라이드(css에서 flex, img 크기 지정 필요)
-        // setInterval(function(){
-        //     $('.slide').animate({left:-1200}, function(){
-        //         $('.slide div:first').appendTo($('.slide'))
-        //         $('.slide').css('left',0)
-        //     })
-        // },3000)
+        setInterval(function(){
+            $('.slide').animate({left:-1200}, function(){
+                $('.slide div:first').appendTo($('.slide'))
+                $('.slide').css('left',0)
+            })
+        },3000)
 
 
         // 탭

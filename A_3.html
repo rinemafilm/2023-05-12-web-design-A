@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-1</title>
-    <link rel="stylesheet" href="/css/A_1.css">
+    <title>A-3</title>
+    <link rel="stylesheet" href="/css/A_3.css">
     <script src="./script/jquery-1.12.4.js"></script>
     <script src="./script/A_1.js"></script>
 </head>
@@ -58,12 +58,16 @@
 
     <script>
         // 메뉴
-        $('.gnb').hover(
+        $('.gnb > li').hover(
             function(){
-                $('.gnb ul').stop().fadeIn()
+                // $(this).find('ul').show()
+                // $(this).find('ul').stop().fadeIn()
+                $(this).find('ul').stop().slideDown()
             },
             function(){
-                $('.gnb ul').stop().fadeOut()
+                // $(this).find('ul').hide()
+                // $(this).find('ul').stop().fadeOut()
+                $(this).find('ul').stop().slideUp()
             }
         )
 

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-1</title>
-    <link rel="stylesheet" href="/css/A_1.css">
+    <title>A-4</title>
+    <link rel="stylesheet" href="/css/A_2.css">
     <script src="./script/jquery-1.12.4.js"></script>
     <script src="./script/A_1.js"></script>
 </head>
@@ -60,12 +60,16 @@
         // 메뉴
         $('.gnb').hover(
             function(){
-                $('.gnb ul').stop().fadeIn()
+                $('.gnb ul').stop().slideDown()
+                $('.gnb').addClass('active')
             },
             function(){
-                $('.gnb ul').stop().fadeOut()
+                $('.gnb ul').stop().slideUp()
+                $('.gnb').removeClass('active')
             }
         )
+
+
 
         // 슬라이드
         // setInterval(function(){
